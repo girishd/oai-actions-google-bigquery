@@ -7,7 +7,7 @@ const {Parser} = require('json2csv');
 // when you make an HTTP request to the deployed function's endpoint.
 functions.http('query_to_csv', async (req, res) => {
   const sqlQuery = req.body.query;
-  //const sqlQuery = "SELECT * FROM `enhanced-storm-404515.Flights.flights_nyc_jan2013` LIMIT 10";
+
 
   if (!sqlQuery) {
     res.status(400).send('No query provided in the request body.');
